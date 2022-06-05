@@ -1,0 +1,138 @@
+﻿/* font face start*/
+@font-face {
+    font-family: "Sarabun-Medium";
+    src: url("../font/Sarabun-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Sarabun-Regular";
+    src: url("../font/Sarabun-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Sarabun-SemiBold";
+    src: url("../font/Sarabun-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "THSarabunNew";
+    src: url("../font/THSarabunNew.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "THSarabunNew-Bold";
+    src: url("../font/THSarabunNew-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "AngsanaNEW";
+    src: url("../font/AngsanaNEW.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+/* font face end*/
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    padding: 50px 20px 20px;
+    background-color: #ffffff;
+    font-family: "THSarabunNew", sans-serif !important;
+}
+
+#documentContent {
+    line-height: 1.2;
+    letter-spacing: 0px !important;
+    color: #333;
+}
+
+#documentContent .titleBox {
+    font-size: 27px !important;
+    font-weight: bold;
+}
+
+#documentContent .topic-txt {
+    font-size: 34px !important;
+    font-weight: bold;
+}
+
+.name-txt {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.customer-box {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.topic-txt {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-txt {
+    font-size: 30px;
+    font-weight: normal;
+    text-align: end;
+}
+
+.topic-txtc {
+  text-align: left;
+  padding-top: 1.5rem;
+  padding-left: 7rem;
+  white-space: nowrap;
+}
+
+.topic-wrap {
+    white-space: nowrap;
+}
+
+.name-txt {
+  text-align: center;
+}
+
+.consent-box {
+    text-align: end;
+    padding-top: 10rem;
+}
+
+.consent-txt {
+    text-align: end;
+    padding-right: 8.5rem;
+}
+
+.foot-box {
+  padding-top: 5rem;
+}
+
+.foot-topic {
+  font-weight: bold;
+  text-decoration-line: underline;
+}

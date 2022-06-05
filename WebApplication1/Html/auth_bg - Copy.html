@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Authorization for Background Check</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/consent.css">
+</head>
+  <body>
+    <div id="documentContent">
+        <span class="topic-txt">หนังสือยินยอมให้ตรวจประวัติบุคคล</span>
+      <div class="titleBox">
+        <span class="title-txt">เขียนที่ บริษัท CN164x (ประเทศไทย) จำกัด</span>
+        <span class="title-txt">วันที่..{{data.day}}..เดือน..{{data.month}}..พ.ศ..{{data.year}}..</span>
+      </div>
+      <div class="customer-box">
+        <span class="topic-head">เรียน ผู้บังคับการกองทะเบียนประวัติอาชญากร</span>
+      </div>
+      <div class="customer-box">
+        <div class="topic-txtc">
+          <span class="topi-txtc">ข้าพเจ้า</span><span class="name-txt">__________{{preName}}{{firstName}} {{lastName}}__________</span>
+        </div>
+        <div>
+          <span>เลขบัตรประชาชน</span>
+          <span class="name-txt">__________{{numberId}}__________</span>
+          <span>อยู่บ้านเลขที่</span>
+          <span class="name-txt">________{{homeId}}________</span>
+          <span>หมู่ที่</span>
+          <span class="name-txt">________{{muId}}________</span>
+        </div>
+        <div>
+          <span>ซอย</span>
+          <span class="name-txt">________{{soyId}}________</span>
+          <span>ถนน</span>
+          <span class="name-txt">________{{TnonId}}________</span>
+          <span>ตำบล/แขวง</span>
+          <span class="name-txt">________{{TumId}}________</span>
+        </div>
+        <div>
+          <span>อำเภอ/เขต</span>
+          <span class="name-txt">________{{TnonId}}________</span>
+          <span>จังหวัด</span>
+          <span class="name-txt">________{{TnonId}}________</span>
+          <span>โทรศัพท์</span>
+          <span class="name-txt">________{{TnonId}}________</span>
+        </div>
+        <div>
+          <span>ขอยินยอมให้บริษัท</span>
+          <span class="name-txt">___________________________________________________________________</span>
+        </div>
+        <div>
+          <span class="name-txt">
+            ซึ่งได้รับมอบอำนาจจาก บริษัท CN164x (ประเทศไทย) จำกัด สำนักงานตัต้งอยู่ที่ 164 อาคารธนภูมิ ชั้นที่ 12 ถนนเพชรบุรีตัดใหม่ แขวงมักกะสัน เขตราชเทวี กรุงเทพมหานคร 10400 ซึ่งเป็นบริษัทฯ ที่ข้าพเจ้าได้เข้ามาสมัครงานมีสิทธิในการดำเนินการใดในการตรวจสอบประวัติของข้าพเจ้ากับกองทะเบียนประวัติอาชญากรโดยไม่มีเงื่อนไขใด ๆ ทั้งสิ้น
+          </span>
+        </div>
+        <div class="consent-box">
+          <div>
+            <span>ลงชื่อ</span>
+            <span class="name-txt">_______________________</span>
+            <span>ผู้ให้ความยินยอม</span>
+          </div>
+          <div>
+            <span class="consent-txt">(_______________________)</span>
+          </div>
+        </div>
+        <div class="foot-box">
+          <span class="foot-topic">หมายเหตุ</span>
+          <span class="foot-txt"> กรุณากรอกรายละเอียดให้ครบทุกช่อง</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

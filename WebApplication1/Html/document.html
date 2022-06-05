@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Installment-Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div id="documentContent">
+        <div class="header-code">N20</div>
+        <div class="header-box">
+            {{<!--Add company details-->}}
+            <div class="customer-box">
+                <div class="row-ntb">
+                    <div class="col-ntb-6">
+                        <div>
+                            <span class="topic-txt">ชื่อ-นามสกุล:</span>
+                            <span class="main-txt">{{preName}}{{firstName}} {{lastName}}</span>
+                        </div>
+                        <div>
+                            <span class="topic-txt">เลขที่สัญญา:</span>
+                            <span class="main-txt">{{contractNumber}}</span>
+                        </div>
+                        <div>
+                            <span class="topic-txt">{{collateralTitle}}</span>
+                            <span class="main-txt">{{collateralNumber}}</span>
+                        </div>
+                        <div>
+                            <span class="topic-txt">วันเริ่มสัญญา:</span>
+                            <span class="main-txt">{{contractCreatedAt}}</span>
+                        </div>
+                    </div>
+                    <div class="col-ntb-6">
+                        <div>
+                            <span class="topic-txt">สาขา:</span>
+                            <span class="main-txt">{{branchName}}</span>
+                        </div>
+                        <div>
+                            <span class="topic-txt">ประเภทหลักประกัน:</span>
+                            <span class="main-txt">{{productType}}</span>
+                        </div>
+                        <div>
+                            <span class="topic-txt">ยอดจัดสินเชื่อ:</span>
+                            <span class="main-txt">{{principle}} บาท</span>
+                        </div>
+                        <div class="flex">
+                            <div class="box-left">
+                                <span class="topic-txt">ค่างวด:</span>
+                            </div>
+                            <div class="box-right">
+                                {{installment}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-loan">
+            <table aria-describedby="table loan-card">
+                <tr>
+                    <th class="title" scope="col" colspan="10"> ตารางแสดงภาระหนี้ </th>
+                </tr>
+                <tr>
+                    <th class="order" scope="col" rowspan="3"> งวด </th>
+                    <th class="date" scope="col" rowspan="3"> วันครบ<br />กำหนด<br />ชำระ </th>
+                    <th scope="col" colspan="2"> ยอดคงค้างต้นงวด</th>
+                    <th scope="col" colspan="4"> รายการระหว่างงวด </th>
+                    <th scope="col" colspan="2"> ยอดคงค้างปลายงวด </th>
+                </tr>
+                <tr>
+                    <th scope="col" rowspan="2"> เงินต้น </th>
+                    <th scope="col" rowspan="2">
+                        <div class="exponent-box">
+                            <div>ยอดคง<br />ค้างอื่น</div>
+                            <div class="txt-exponent">4</div>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div>เงินต้น</div>
+                    </th>
+                    <th class="dues-payment" scope="col">
+                        <div class="exponent-box">
+                            <div>ดอกเบี้ยและ<br />ค่าธรรมเนียม</div>
+                            <div class="txt-exponent">1</div>
+                        </div>
+                    </th>
+                    <th class="dues-payment" scope="col">
+                        <div class="exponent-box">
+                            <div>ค่าใช้จ่ายนำส่ง<br />บุคคลภายนอก</div>
+                            <div class="txt-exponent">2</div>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="exponent-box">
+                            <div>ค่างวด</div>
+                            <div class="txt-exponent">3</div>
+                        </div>
+                    </th>
+                    <th scope="col" rowspan="2"> เงินต้น </th>
+                    <th scope="col" rowspan="2">
+                        <div class="exponent-box">
+                            <div>ยอดคง<br />ค้างอื่น</div>
+                            <div class="txt-exponent">4</div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="txt-footer" scope="col"> (A) </th>
+                    <th class="txt-footer" scope="col"> (B) </th>
+                    <th class="txt-footer" scope="col"> (C) </th>
+                    <th class="txt-footer" scope="col"> (A)+(B)+(C) </th>
+                </tr>
+                <tbody>
+                    {{<!--Add row installment data-->}}
+                </tbody>
+            </table>
+        </div>
+        <div class="explication-box">
+            <div class="title">คำอธิบาย</div>
+            <ol>
+                <li>ดอกเบี้ยและค่าธรรมเนียม ประกอบไปด้วย ดอกเบี้ย ค่าธรรมเนียมในการใช้วงเงิน และค่าธรรมเนียมอื่นๆ</li>
+                <li>ค่าใช้จ่ายนำส่งบุคคลภายนอก ประกอบไปด้วย ค่าเบี้ยกรมธรรม์ประกันภัย ค่าธรรมเนียมหนังสือค้ำประกัน ค่าต่อภาษี <br />และค่าธรรมเนียมอื่นๆ ที่ลูกค้าขอให้นำส่งบุคคลภายนอก</li>
+                <li>ค่างวด ประกอบไปด้วย เงินต้นที่ชำระคืน ดอกเบี้ยและค่าธรรมเนียม ค่าใช้จ่ายนำส่งบุคคลภายนอก และยอดคงค้างอื่น<br />ที่ชำระคืน (ถ้ามี)</li>
+                <li>ยอดคงค้างอื่น หมายถึง ภาระหนี้ของลูกค้าที่ยังไม่ได้ชำระ ประกอบไปด้วย ดอกเบี้ยและค่าธรรมเนียม และค่าใช้จ่ายนำส่ง<br />บุคคลภายนอก โดยภาระหนี้นี้ไม่มีการคิดดอกเบี้ย</li>
+            </ol>
+            <div class="title">หมายเหตุ</div>
+            <ol>
+                <li>หากลูกค้าผิดนัดชำระหนี้ อาจจะมีค่าปรับ ค่าทวงถาม และค่าธรรมเนียมอื่นๆ เพิ่มเติม</li>
+                <li>
+                    การผ่อนชำระคืนจะเป็นไปตามตารางข้างต้น เมื่อลูกค้าชำระเงินครบถ้วนและตรงตามวันครบกำหนดชำระเท่านั้นหากลูกค้า<br />ผ่อนชำระล่าช้ากว่ากำหนด
+                    จำนวนงวดหรือค่างวดผ่อนชำระจะเพิ่มขึ้น ในทางกลับกันหากลูกค้าผ่อนชำระเร็วหรือมากกว่า<br />ที่กำหนดจำนวนงวดหรือค่างวดผ่อนชำระในงวดสุดท้ายจะลดลง
+                </li>
+            </ol>
+        </div>
+        {{<!--Add payment details-->}}
+        <div class="footer-code">N20-210831</div>
+    </div>
+</body>
+</html>

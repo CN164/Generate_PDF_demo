@@ -1,0 +1,424 @@
+﻿/* font face start*/
+@font-face {
+    font-family: "Sarabun-Medium";
+    src: url("../font/Sarabun-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Sarabun-Regular";
+    src: url("../font/Sarabun-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Sarabun-SemiBold";
+    src: url("../font/Sarabun-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "THSarabunNew";
+    src: url("../font/THSarabunNew.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "THSarabunNew-Bold";
+    src: url("../font/THSarabunNew-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "AngsanaNEW";
+    src: url("../font/AngsanaNEW.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+/* font face end*/
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    padding: 50px 20px 20px;
+    background-color: #ffffff;
+    font-family: "THSarabunNew", sans-serif !important;
+}
+
+#documentContent {
+    line-height: 1.2;
+    letter-spacing: 0px !important;
+    color: #042992;
+}
+
+.flex {
+    display: -webkit-box;
+}
+
+.flex .box-left {
+    width: 58px;
+}
+
+.row-ntb {
+    width: 100%;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    -webkit-flex-wrap: wrap;
+}
+
+.col-ntb-6 {
+    width: 50%;
+}
+
+.ntb-col-2 {
+    width: 20%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.ntb-col-1 {
+    width: 17%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#documentContent .header-code {
+    width: 42px;
+    height: 35px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+#documentContent .footer-code {
+    font-size: 24px;
+    line-height: 0;
+    margin-top: 40px;
+    text-align: right;
+}
+
+#documentContent .header-box .company-box {
+    width: 100%;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    -webkit-flex-wrap: wrap;
+    padding-left: 40px;
+}
+
+#documentContent .header-box .company-box .logo-box {
+    width: 20%;
+}
+
+#documentContent .header-box .company-box .logo-box .img-logo {
+    width: 75%;
+}
+
+#documentContent .header-box .company-box .address-box {
+    width: 80%;
+    font-size: 22px;
+}
+
+#documentContent .header-box .company-box .address-box .company-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#documentContent .header-box .customer-box {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#documentContent .header-box .customer-box .topic-txt {
+    font-size: 27px;
+}
+
+#documentContent .header-box .customer-box .main-txt {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#documentContent .table-loan {
+    margin-top: 20px;
+}
+
+#documentContent .table-loan table,
+#documentContent .table-loan td,
+#documentContent .table-loan th {
+    border: 1px solid #f8097c;
+    text-align: center;
+    font-size: 24px;
+    line-height: 0.9;
+    background-color: #fcd8e4;
+    color: #042992;
+    padding: 5px;
+}
+
+#documentContent .table-loan table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#documentContent .table-loan table td {
+    font-size: 24px;
+}
+
+#documentContent .table-loan table th {
+    vertical-align: top;
+}
+
+
+#documentContent .table-loan table th,
+#documentContent .table-loan table td {
+    width: 100px !important;
+}
+
+#documentContent .table-loan table th.title,
+#documentContent .table-loan table td.title {
+    height: 40px;
+    font-size: 26px;
+    font-weight: bold !important;
+    background-color: #fe0080 !important;
+    color: #ffffff;
+    vertical-align: middle !important;
+}
+
+#documentContent .table-loan table th.order,
+#documentContent .table-loan table td.order {
+    width: 4% !important;
+}
+
+#documentContent .table-loan table th.date,
+#documentContent .table-loan table td.date {
+    width: 10% !important;
+}
+
+#documentContent .table-loan table th.dues-payment,
+#documentContent .table-loan table td.dues-payment {
+    width: 12% !important;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(2)
+.exponent-box,
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(8)
+.exponent-box {
+    position: relative;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(2)
+.exponent-box
+.txt-exponent,
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(8)
+.exponent-box
+.txt-exponent {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    font-size: 16px;
+}
+
+#documentContent .table-loan table tr:nth-child(3) th:nth-child(3) {
+    border-bottom: 0px;
+    /*vertical-align: bottom;*/
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(3)
+.exponent-box {
+    position: relative;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(3)
+.exponent-box
+.txt-exponent {
+    position: absolute;
+    top: 24px;
+    right: 2px;
+    font-size: 16px;
+}
+
+#documentContent .table-loan table tr:nth-child(3) th:nth-child(4) {
+    border-bottom: 0px;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(4)
+.exponent-box {
+    position: relative;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(4)
+.exponent-box
+.txt-exponent {
+    position: absolute;
+    top: 16px;
+    right: 3px;
+    font-size: 16px;
+}
+
+#documentContent .table-loan table tr:nth-child(3) th:nth-child(5) {
+    border-bottom: 0px;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(5)
+.exponent-box {
+    position: relative;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(5)
+.exponent-box
+.txt-exponent {
+    position: absolute;
+    top: 16px;
+    right: -2px;
+    font-size: 16px;
+}
+
+#documentContent .table-loan table tr:nth-child(3) th:nth-child(6) {
+    border-bottom: 0px;
+    background-color: #ff99cc;
+}
+
+#documentContent .table-loan table tr:nth-child(4) th:nth-child(4),
+#documentContent .table-loan table tr td:nth-child(8) {
+    background-color: #ff99cc;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(6)
+.exponent-box {
+    position: relative;
+}
+
+#documentContent
+.table-loan
+table
+tr:nth-child(3)
+th:nth-child(6)
+.exponent-box
+.txt-exponent {
+    position: absolute;
+    top: -4px;
+    right: 16px;
+    font-size: 16px;
+}
+
+#documentContent .table-loan table .txt-footer {
+    font-size: 16px;
+    border-top: 0px;
+}
+
+#documentContent .explication-box {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+#documentContent .explication-box .title {
+    font-weight: bold;
+}
+
+#documentContent .explication-box ol {
+    padding-inline-start: 15px;
+    list-style-type: decimal;
+}
+
+#documentContent .payment-box {
+    width: 100%;
+    background-color: #fee8f0;
+    font-size: 28px;
+    padding: 30px;
+    position: relative;
+}
+
+#documentContent .payment-box .payment-title {
+    background-color: #f8097c;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    width: 220px;
+    padding: 7px;
+    position: absolute;
+    top: -25px;
+    left: 38.5%;
+}
+
+#documentContent .payment-box .mobile-banking .title,
+#documentContent .payment-box .counter-service .title {
+    font-weight: bold;
+    color: #f8097c;
+    margin-bottom: 10px;
+}
+
+#documentContent .payment-box .mobile-banking .choic,
+#documentContent .payment-box .counter-service .choic {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#documentContent .payment-box .mobile-banking .choic .img-payment,
+#documentContent .payment-box .counter-service .choic .img-payment {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
