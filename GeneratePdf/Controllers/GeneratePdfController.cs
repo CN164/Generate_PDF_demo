@@ -18,10 +18,10 @@ namespace GeneratePDF_demo.Controllers
         {
             this._generatePdfFlow = generatePdfFlow;
         }
-        [HttpPost("api/generatepdf")]
-        public string GeneratePdf([FromBody] ContactRequest request)
+        [HttpPost("api/generatepdf/authenticate")]
+        public ConsentResponse GeneratePdf([FromBody] ContactRequest request)
         {
-            string response = _generatePdfFlow.ProcessGeneratePdf(request);
+            ConsentResponse response = _generatePdfFlow.ProcessGeneratePdf(request);
             
             return response;
         }

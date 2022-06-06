@@ -7,21 +7,23 @@ using GeneratePDF_demo.Models;
 using System.IO;
 using System.Text;
 using System.Globalization;
+using GeneratePDF_demo.Models;
 
 namespace GeneratePDF_demo.BusinessFlow
 {
     public class GeneratePdfFlow
     {
-        public string ProcessGeneratePdf(ContactRequest request)
+        public ConsentResponse ProcessGeneratePdf(ContactRequest request)
         {
+            ConsentResponse ConsentModelResponse = new ConsentResponse();
             string respone = "";
             string tempFolder = Directory.GetCurrentDirectory() + $"/Html/auth_bg_Mapdata";
             if (Directory.Exists(tempFolder))
                 Directory.Delete(tempFolder, true);
             try
             {
-                GenerateHtmlAndMapingData(request);
-                respone = "Delete and Generate complate";
+                ConsentModelResponse = GenerateHtmlAndMapingData(request);
+                ConsentModelResponse.message = "Delete and Generate complate";
             }
             catch (Exception ex)
             {
@@ -33,10 +35,12 @@ namespace GeneratePDF_demo.BusinessFlow
                 Directory.Delete(tempFolder, true);
             }
 
-            return respone;
+            return ConsentModelResponse;
         }
-        public string GenerateHtmlAndMapingData(ContactRequest request)
+        public ConsentResponse GenerateHtmlAndMapingData(ContactRequest request)
         {
+            ConsentResponse ConsentModel = new ConsentResponse();
+            string nameFile = "Authorization_for_Background_Check";
             string stringHTML = string.Empty;
             string sourcePath = Directory.GetCurrentDirectory() + $"/Html/auth_bg_Mapdata" + ".html";
             string targetPath = Directory.GetCurrentDirectory() + $"/Html/auth_bg_Mapdata/";
@@ -56,7 +60,7 @@ namespace GeneratePDF_demo.BusinessFlow
                     using (StreamWriter outputFile = new StreamWriter(stream, Encoding.UTF8))
                     {
                         stream = null;
-                        outputFile.Write(MappingData(request, stringHTML));
+                        outputFile.Write(MappingDataAuth(request, stringHTML));
                         outputFile.Flush();
                         outputFile.Close();
                     }
@@ -76,13 +80,17 @@ namespace GeneratePDF_demo.BusinessFlow
             var Renderer = new ChromePdfRenderer();
 
             using var PDF = Renderer.RenderHtmlFileAsPdf(targetPath + "/auth_bg_Mapdate.html");
-            PDF.SaveAs("Authorization_for_Background Check.pdf");
-            return "Generate Compleat!";
+            PDF.SaveAs(nameFile + ".pdf");
+
+            string currentPath = Directory.GetCurrentDirectory().Replace("\\", "/") + $"/Authorization_for_Background_Check" + ".pdf";
+            ConsentModel.path = currentPath;
+
+            return ConsentModel;
         }
-        public string MappingData(ContactRequest request, string stringHTML)
+        public string MappingDataAuth(ContactRequest request, string stringHTML)
         {
             string response = stringHTML;
-            response = response.Replace("{{contractCreatedAt}}", request.contractCreatedAt.ToString("d MMM yyyy", new CultureInfo("th-TH")))
+            response = response.Replace("{{contractCreatedAt}}", request.contractCreatedAt.ToString("d MMMM yyyy", new CultureInfo("th-TH")))
                 .Replace("{{idCard}}", request.idCard)
                 .Replace("{{houseNo}}", request.houseNo)
                 .Replace("{{villageNo}}", request.villageNo)

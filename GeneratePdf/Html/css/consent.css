@@ -67,6 +67,7 @@ body {
 #documentContent .titleBox {
     font-size: 27px !important;
     font-weight: bold;
+    padding-top: 1.5rem;
 }
 
 #documentContent .topic-txt {
@@ -135,4 +136,9 @@ body {
 .foot-topic {
   font-weight: bold;
   text-decoration-line: underline;
+}
+
+#dis-txt {
+    text-align: justify !important;
+    overflow-wrap: break-word !important;
 }
