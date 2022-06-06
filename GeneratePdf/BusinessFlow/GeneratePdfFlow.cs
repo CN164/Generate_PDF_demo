@@ -7,7 +7,6 @@ using GeneratePDF_demo.Models;
 using System.IO;
 using System.Text;
 using System.Globalization;
-using GeneratePDF_demo.Models;
 
 namespace GeneratePDF_demo.BusinessFlow
 {
@@ -16,18 +15,17 @@ namespace GeneratePDF_demo.BusinessFlow
         public ConsentResponse ProcessGeneratePdf(ContactRequest request)
         {
             ConsentResponse ConsentModelResponse = new ConsentResponse();
-            string respone = "";
             string tempFolder = Directory.GetCurrentDirectory() + $"/Html/auth_bg_Mapdata";
             if (Directory.Exists(tempFolder))
                 Directory.Delete(tempFolder, true);
             try
             {
                 ConsentModelResponse = GenerateHtmlAndMapingData(request);
-                ConsentModelResponse.message = "Delete and Generate complate";
+                ConsentModelResponse.message = "Delete and Generate complate!";
             }
             catch (Exception ex)
             {
-                Console.WriteLine("generate installment file: " + ex.Message);
+                Console.WriteLine("generate Authorization for Background Check file: " + ex.Message);
                 throw ex;
             }
             finally
