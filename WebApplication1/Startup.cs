@@ -11,7 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Data;
+using GeneratePDF_demo.Data;
+using GeneratePDF_demo.BusinessFlow;
+using GeneratePDF_demo.BusinessLogic;
 
 namespace WebApplication1
 {
@@ -31,6 +33,10 @@ namespace WebApplication1
             var sqlConnectionString = Configuration.GetConnectionString("postgres");
             var sqlConnectionStringReadOnly = Configuration.GetConnectionString("postgresReadOnly");
             services.AddScoped<Maincontext>();
+            
+            services.AddScoped<GeneratePdfFlow>();
+            services.AddScoped<GeneratePdfLogic>();
+
             //services.AddScoped<IBaseRepository, BaseRepository>();
 
             //services.AddDbContext<Maincontext>(options =>
