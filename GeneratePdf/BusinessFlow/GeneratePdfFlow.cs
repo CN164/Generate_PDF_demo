@@ -89,7 +89,7 @@ namespace GeneratePDF_demo.BusinessFlow
         {
             string response = stringHTML;
             response = response.Replace("{{contractCreatedAt}}", request.contractCreatedAt.ToString("d MMMM yyyy", new CultureInfo("th-TH")))
-                .Replace("{{idCard}}", request.idCard)
+                .Replace("{{idCard}}", Convert.ToInt64(request.idCard).ToString("#-####-#####-##-#"))
                 .Replace("{{houseNo}}", request.houseNo)
                 .Replace("{{villageNo}}", request.villageNo)
                 .Replace("{{laneContact}}", request.laneContact)
@@ -97,9 +97,9 @@ namespace GeneratePDF_demo.BusinessFlow
                 .Replace("{{SubDistrict}}", request.SubDistrict)
                 .Replace("{{districtContact}}", request.districtContact)
                 .Replace("{{province}}", request.province)
-                .Replace("{{phoneNumber}}", request.phoneNumber)
+                .Replace("{{phoneNumber}}", Convert.ToInt64(request.phoneNumber).ToString("0##-###-####"))
                 .Replace("{{preName}}", request.preName)
-                .Replace("{{firstName}}", request.firstName)
+                .Replace("{{firstName}}", request.firstName) 
                 .Replace("{{lastName}}", request.lastName)
                 .Replace("{{currentPath}}", Directory.GetCurrentDirectory().Replace("\\", "/"));
 
