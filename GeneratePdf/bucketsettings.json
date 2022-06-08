@@ -1,0 +1,12 @@
+{
+  "BucketSettings": {
+    "Dev": {
+      "Bucket": "ntb-public-dev",
+      "ReceiptBucket": "ntb-receipt-dev"
+    },
+    "Production": {
+      "Bucket": "drive.ntb.co.th",
+      "ReceiptBucket": "drive.ntb.co.th"
+    }
+  }
+}

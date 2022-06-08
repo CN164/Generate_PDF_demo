@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.7.11.13" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.9.13" />
+    <PackageReference Include="Barcode" Version="2022.5.5918" />
+    <PackageReference Include="BarcodeLib" Version="2.4.0" />
     <PackageReference Include="IronPdf" Version="2022.5.5629" />
     <PackageReference Include="LinqKit" Version="1.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />

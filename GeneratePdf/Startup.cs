@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using GeneratePDF_demo.Data;
 using GeneratePDF_demo.BusinessFlow;
 using GeneratePDF_demo.BusinessLogic;
+using GeneratePDF_demo.Service;
 
 namespace WebApplication1
 {
@@ -38,6 +39,7 @@ namespace WebApplication1
             services.AddScoped<GeneratePdfLogic>();
 
             //services.AddScoped<IBaseRepository, BaseRepository>();
+            //services.AddScoped<IS3Service, S3Service>();
 
             //services.AddDbContext<Maincontext>(options =>
             //    options.UseNpgsql(Configuration.GetConnectionString("postgres")
